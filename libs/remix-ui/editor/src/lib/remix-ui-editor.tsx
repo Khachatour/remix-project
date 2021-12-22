@@ -258,7 +258,7 @@ export const EditorUI = (props: EditorUIProps) => {
             range: new monacoRef.current.Range(marker.position.start.line + 1, marker.position.start.column + 1, marker.position.end.line + 1, marker.position.end.column + 1),
             options: {
               isWholeLine,
-              inlineClassName: `bg-info highlightLine${marker.position.start.line + 1}`
+              inlineClassName: `alert-info highlightLine${marker.position.start.line + 1}`
             }
           })
         }
@@ -371,7 +371,7 @@ export const EditorUI = (props: EditorUIProps) => {
   }
 
   return (
-    <div className="w-100 h-100 d-flex flex-column">
+    <div className="w-100 h-100 d-flex flex-column-reverse">
       <Editor
         width="100%"
         path={props.currentFile}
