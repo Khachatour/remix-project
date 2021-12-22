@@ -209,7 +209,12 @@ export const EditorUI = (props: EditorUIProps) => {
         'editor.lineHighlightBorder': secondaryColor,
         'editor.lineHighlightBackground': textbackground === darkColor ? lightColor : secondaryColor,
         'editorGutter.background': lightColor,
-        'minimap.background': lightColor
+        'minimap.background': lightColor,
+        'menu.foreground': textColor,
+        'menu.background': textbackground,
+        'menu.selectionBackground': secondaryColor,
+        'menu.selectionForeground': textColor,
+        'menu.selectionBorder': secondaryColor
       }
     })
     monacoRef.current.editor.setTheme(themeName)
